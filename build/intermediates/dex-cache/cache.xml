@@ -2,14 +2,20 @@
 <pre-dex-items>
 
     <item
+        dex="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\build\intermediates\pre-dexed\debug\classes-3b2f3e4aea225a03ec56a6c31e7423fbe11d83b6.jar"
+        jar="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
         dex="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\build\intermediates\pre-dexed\debug\classes-857d980a619dc106d484170ef567ed8ca4018c50.jar"
         jar="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
     <item
-        dex="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\build\intermediates\pre-dexed\debug\commons-io-2.4-deb0d85f023ede011817f4febd2b35ec80847321.jar"
-        jar="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\libs\commons-io-2.4.jar"
+        dex="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\build\intermediates\pre-dexed\debug\commons-io-2.4-c93feeffb0ff8af8e9a8944949e69236b954088a.jar"
+        jar="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\libs\commons-io-2.4.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad"/>
@@ -19,5 +25,11 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\build\intermediates\pre-dexed\debug\commons-io-2.4-deb0d85f023ede011817f4febd2b35ec80847321.jar"
+        jar="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\libs\commons-io-2.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad"/>
 
 </pre-dex-items>

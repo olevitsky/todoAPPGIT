@@ -8,5 +8,11 @@
     <string name="AddButton">Add</string>
     <string name="title_activity_edit_time">EditTimeActivity</string>
     <string name="buttonSave">Save</string>
+    <string name="choosePriority">Priority</string>
+    <string-array name="priorities">
+        <item>Low</item>
+        <item>Med</item>
+        <item>High</item>
+    </string-array>
 
 </resources>

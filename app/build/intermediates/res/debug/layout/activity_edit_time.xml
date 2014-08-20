@@ -29,5 +29,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="59dp" />
+    <Spinner
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_priority"
+        android:entries="@array/priorities"
+        android:prompt="@+id/choosePriority"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ed_text"
+        android:layout_above="@+id/saveButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
-<!-- From: file:/C:/Users/oleg/AndroidStudioProjects/todoAPP/app/src/main/res/layout/activity_edit_time.xml -->
+<!-- From: file:/C:/Users/oleg/AndroidStudioProjects/todoAPPGIT/app/src/main/res/layout/activity_edit_time.xml -->

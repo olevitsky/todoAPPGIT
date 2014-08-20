@@ -1,6 +1,7 @@
 package com.example.oleg.todoapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,12 +10,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.oleg.todoapp.R;
 
 public class EditTimeActivity extends ActionBarActivity {
     private int itemPos;
-    EditText etNewItem;
+    private EditText etNewItem;
+    private Spinner PullDownPriority;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +34,18 @@ public class EditTimeActivity extends ActionBarActivity {
 
         String itemText = getIntent().getStringExtra("itemText");
         itemPos = getIntent().getIntExtra("pos",0);
+
         etNewItem = (EditText) findViewById(R.id.ed_text);
         etNewItem.setText(itemText);
+        String priority = getIntent().getStringExtra("priority");
+        PullDownPriority = (Spinner) findViewById (R.id.ed_priority);
+        if (priority.equals(Integer.toString(Color.RED))) {
+            PullDownPriority.setSelection(2);
+        } else if (priority.equals(Integer.toString(Color.YELLOW))) {
+            PullDownPriority.setSelection(1);
+        } else {
+            PullDownPriority.setSelection(0);
+        }
         this.getWindow().setAttributes(params);
     }
 
@@ -46,11 +60,19 @@ public class EditTimeActivity extends ActionBarActivity {
 
     public void onEditItem(View v) {
         String itemText = etNewItem.getText().toString();
+        String curPriority = String.valueOf(PullDownPriority.getSelectedItem());
         // Prepare data intent
         Intent i = new Intent();
         // Pass relevant data back as a result
         i.putExtra("itemText" , itemText);
         i.putExtra("pos" , itemPos);
+        if(curPriority.equals("High")) {
+            i.putExtra("priority", (Integer.toString(Color.RED)));
+        } else if (curPriority.equals("Med")) {
+            i.putExtra("priority", (Integer.toString(Color.YELLOW)));
+        } else {
+            i.putExtra("priority", (Integer.toString(Color.WHITE)));
+        }
         setResult(RESULT_OK, i); // set result code and bundle data for response
         finish(); // closes the activity, pass data to parent
     }

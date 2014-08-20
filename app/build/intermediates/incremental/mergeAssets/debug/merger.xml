@@ -2,13 +2,13 @@
 <merger version="2" >
 
     <dataSet config="19.1.0" >
-        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\assets" />
+        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\src\main\assets" />
+        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\src\main\assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPP\app\src\debug\assets" />
+        <source path="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\src\debug\assets" />
     </dataSet>
 
 </merger>
