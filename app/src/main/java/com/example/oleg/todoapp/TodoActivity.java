@@ -3,6 +3,7 @@ package com.example.oleg.todoapp;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import org.apache.commons.io.FileUtils;
 
@@ -22,7 +25,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class TodoActivity extends ActionBarActivity {
+public class TodoActivity extends ActionBarActivity implements  EditNameDialog.OnHeadlineSelectedListener {
     private ArrayList<String> toDoItems =  new ArrayList<String>();
     private ArrayAdapter<String> toDoAdapter;
     private ListView lvItems;
@@ -33,6 +36,25 @@ public class TodoActivity extends ActionBarActivity {
     String curPriority = "Low";
     private ArrayList<String> toDoItemsPriority = new ArrayList<String>();
 
+
+    public void onArticleSelected(String itemText, int pos, String priority) {
+        // The user selected the headline of an article from the HeadlinesFragment
+        // Do something here to display that article
+        if (itemText.isEmpty()) {
+            toDoItems.remove(pos);
+            toDoItemsPriority.remove(pos);
+        } else {
+            toDoItems.set(pos, itemText);
+            toDoItemsPriority.set(pos, priority);
+        }
+        toDoAdapter.notifyDataSetChanged();
+        writeItems();
+        //Toast.makeText(this, itemText + " " + pos + " " + priority , Toast.LENGTH_SHORT).show();
+    }
+
+    /*public void onFinishEditDialog(String inputText1, String inputText2) {
+        Toast.makeText(this, "Hi, " + inputText1 + " " +  inputText2 , Toast.LENGTH_SHORT).show();
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +93,21 @@ public class TodoActivity extends ActionBarActivity {
         lvItems.setAdapter(toDoAdapter);
         setupListViewListener();
 
+
     }
+
+    private void showEditDialog(int pos) {
+        FragmentManager fm = getSupportFragmentManager();
+        EditNameDialog editNameDialog = new EditNameDialog();
+        String itemText = toDoAdapter.getItem(pos);
+        Bundle bundle = new Bundle();
+        bundle.putString("itemText" , itemText);
+        bundle.putInt("pos" , pos);
+        bundle.putString("priority", toDoItemsPriority.get(pos));
+        editNameDialog.setArguments(bundle);
+        editNameDialog.show(fm, "fragment_edit_name");
+    }
+
 
     private void setupListViewListener() {
         lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -88,12 +124,13 @@ public class TodoActivity extends ActionBarActivity {
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View item, int pos, long id) {
-                Intent i = new Intent(TodoActivity.this, EditTimeActivity.class);
+                /*Intent i = new Intent(TodoActivity.this, EditTimeActivity.class);
                 String itemText = toDoAdapter.getItem(pos);
                 i.putExtra("itemText" , itemText);
                 i.putExtra("pos" , pos);
                 i.putExtra("priority", toDoItemsPriority.get(pos));
-                startActivityForResult(i, REQUEST_CODE); // brings up the second activity
+                startActivityForResult(i, REQUEST_CODE); // brings up the second activity*/
+                showEditDialog( pos);
             }
         });
     }
@@ -153,6 +190,7 @@ public class TodoActivity extends ActionBarActivity {
             toDoAdapter.add(itemText);
             toDoAdapter.notifyDataSetChanged();
              //PullDownPriority.setSelection(0);
+
 
 
 

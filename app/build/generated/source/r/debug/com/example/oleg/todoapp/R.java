@@ -944,7 +944,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f080015;
         public static final int action_menu_presenter=0x7f080016;
         public static final int action_mode_close_button=0x7f080024;
-        public static final int action_settings=0x7f080043;
+        public static final int action_settings=0x7f080044;
         public static final int activity_chooser_view_content=0x7f080025;
         public static final int always=0x7f08000f;
         public static final int beginning=0x7f08000a;
@@ -955,6 +955,7 @@ containing a value of this type.
         public static final int dialog=0x7f080012;
         public static final int disableHome=0x7f080008;
         public static final int dropdown=0x7f080013;
+        public static final int e_saveButton=0x7f080043;
         public static final int ed_priority=0x7f08003e;
         public static final int ed_text=0x7f08003c;
         public static final int edit_query=0x7f080030;
@@ -1032,7 +1033,8 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_edit_time=0x7f030018;
         public static final int activity_todo=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int fragment_edit_name=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
         public static final int edit_time=0x7f0d0000;

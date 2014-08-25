@@ -8297,6 +8297,11 @@ false
                 qualifiers=""
                 type="layout" />
             <file
+                name="fragment_edit_name"
+                path="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\src\main\res\layout\fragment_edit_name.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="edit_time"
                 path="C:\Users\oleg\AndroidStudioProjects\todoAPPGIT\app\src\main\res\menu\edit_time.xml"
                 qualifiers=""

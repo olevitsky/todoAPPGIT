@@ -22,6 +22,9 @@
             android:windowSoftInputMode="stateAlwaysVisible|adjustPan"
             android:theme="@android:style/Theme.Dialog">
         </activity>
+        <uses-sdk
+            android:minSdkVersion="7"
+            android:targetSdkVersion="17" />
     </application>
 
 </manifest>
