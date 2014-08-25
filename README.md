@@ -2,7 +2,7 @@ todoAPP
 =======
 This is a simple example of to-do list created using Android studio beta 0.8.0
 
-![alt tag](https://github.com/olevitsky/todoAPP/blob/master/todoAPP_image1.gif)
+![alt tag](https://github.com/olevitsky/todoAPPGIT/blob/FragmentExample/todoAPP_image3.gif)
 
 
 Main features:
